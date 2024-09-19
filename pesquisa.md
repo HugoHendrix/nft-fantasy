@@ -5,6 +5,7 @@
 - Pesquisar unidade de medida ch, rem e em
 - Pesquisar inherit no CSS
 - Propriedade flex
+- Usar CH em textos em paragráfos
 
 
 # Utilizando 

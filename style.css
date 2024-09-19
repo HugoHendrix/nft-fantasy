@@ -25,7 +25,7 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .hero__img { max-width: 550px; }
 
 /* INFO SECTIONS */
-.info { padding-top: 2rem; padding-bottom: 20rem; max-width: 1280px; margin-inline: auto; }
+.info { padding-top: 2rem; padding-bottom: 4rem; max-width: 1280px; margin-inline: auto; }
 .line { width: 100%; height: 2px; background-color: rgba(255, 255, 255, 0.15);}
 .items-wrapper { margin-top: 4rem; display: flex; flex-wrap: wrap; gap: 1.5rem; padding-inline: 1.25rem; }
 .item { flex: 1; min-width: 150px; }
@@ -41,21 +41,42 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .section__description { color: rgba(255, 255, 255, 0.7); line-height: calc(1em + 0.7rem); margin-block: 1rem; }
 .section__btn {  background: linear-gradient(to right, #e8546b, #ac3cf6); padding: 0.5em 2em; border-radius: 6px; color: #000; }
 
+/* FEATURES SECTION  */
+.features { max-width: 1280px; margin-inline: auto; }
+.features-wrapper { background-color: #131325; padding: 4rem 2rem; border-radius: 12px; }
+.features__text { text-align: center; }
+.features--description { max-width: 60ch; margin-inline: auto; }
+
+.features__cards { display: flex; flex-wrap: wrap; gap: 2rem; row-gap: 4rem; margin-top: 6rem;}
+.feature__card { background-color: #252830; padding: 6rem 2rem 2rem 2rem; border-radius: 12px; flex: 1; min-width: 300px; position: relative;}
+.feature__card-img { width: 6rem; position: absolute; top: -3rem; left: 2rem;  }
+.feature__card-title { font-size: 1.3rem; font-weight: 500; } 
+.feature__card-description { font-size: 1rem; color: rgba(255, 255, 255, 0.6); font-weight: 300; } 
+
+
+
 
 
 /* MEDIA QUERIES */
+
+@media (width < 1024px ) {
+    .hero { flex-direction: column; gap: 2.5rem; }
+    .hero__title { max-width: 20ch; } 
+    .hero__img { width: 90%; max-width: 400px; margin-inline: auto; }
+
+    .info-wrapper { flex-direction: column; }
+    .section__description { max-width: 60ch; }
+}
+
 
 @media (width < 768px) {
   .header__nav { display: none; } 
   .header__icon-btn { display: block; }
 }
 
-@media (width < 1024px ) {
-    .hero { flex-direction: column; gap: 2.5rem; }
-    .hero__title { max-width: 20ch; } 
-    .hero__img { width: 90%; max-width: 400px; margin-inline: auto; }
-}
-
 @media (width < 475px) {
     .hero__title { font-size: 2.5rem; }
+    .section__title { font-size: 2rem; }
+
+    
 }
