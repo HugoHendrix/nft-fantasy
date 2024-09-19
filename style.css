@@ -2,88 +2,60 @@
 
 html { overflow-y: scroll; scroll-behavior: smooth; }
 
-body { background: #06061a;  color: #f3f3f3; overflow-x: hidden; font-family: "Raleway", system-ui; }
+body { background: #06061a; color: #f3f3f3; overflow-x: hidden; font-family: "Raleway", system-ui; }
 
-.bg { 
-    background: linear-gradient(150deg, rgba(172, 60, 246, 0.2), #06061a );
+.bg { background: linear-gradient(150deg, rgba(172, 60, 246, 0.2), #06061a); }
+
+/* HEADER */
+header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; max-width: 1366px; margin-inline: auto; }
+.header__logo { font-size: 1.5rem; font-weight: 600; } 
+.nav__ul { list-style: none; display: flex; gap: 2rem; } 
+.nav__a { color: inherit; text-decoration: none; }
+.header__icon-btn { display: none; } 
+.header__icon { width: 1.75rem; height: 1.75rem; }
+
+/* HERO SECTION */
+.hero { display: flex; padding-inline: 1.25rem; padding-top: 6rem; overflow: hidden; max-width: 1280px; margin-inline: auto; }
+.hero__left, .hero__right { flex: 1; }
+.hero__text { color: #2eb1a3; text-transform: uppercase; font-family: 600; margin-bottom: 1rem; } 
+.hero__title { font-size: 3rem; line-height: 1.1; font-weight: 500; letter-spacing: -0.05em; } 
+.hero__description { font-size: 0.9rem; opacity: 0.6; font-weight: 300; line-height: calc(1em + 0.5rem); margin-block: 1.5rem; max-width: 55ch; }
+.hero__btn { background: linear-gradient(to right, #e8546b, #ac3cf6); padding: 0.5em 2em; border-radius: 6px; color: #000; }
+/* Hero Right */ 
+.hero__img { max-width: 550px; }
+
+/* INFO SECTIONS */
+.info { padding-top: 2rem; padding-bottom: 20rem; max-width: 1280px; margin-inline: auto; }
+.line { width: 100%; height: 2px; background-color: rgba(255, 255, 255, 0.15);}
+.items-wrapper { margin-top: 4rem; display: flex; flex-wrap: wrap; gap: 1.5rem; padding-inline: 1.25rem; }
+.item { flex: 1; min-width: 150px; }
+.item__title { font-size: 2.5rem; font-weight: 600; line-height: 1; text-align: center; }
+.item__description { color: rgba(255, 255, 255, 0.7); text-transform: uppercase; text-align: center; }
+
+/* INFO WRAPPER  */
+.info-wrapper { display: flex; align-items: center; padding-inline: 1.25rem; gap: 1.5rem; margin-top: 7rem; }
+.info-left { flex: 1; }
+.info-right { flex: 1; }
+.section__up-text { color: #2eb1a3; text-transform: uppercase; font-weight: 700; }
+.section__title { font-size: 2.5rem; line-height: 1.2; font-weight: 500; }
+.section__description { color: rgba(255, 255, 255, 0.7); line-height: calc(1em + 0.7rem); margin-block: 1rem; }
+.section__btn {  background: linear-gradient(to right, #e8546b, #ac3cf6); padding: 0.5em 2em; border-radius: 6px; color: #000; }
+
+
+
+/* MEDIA QUERIES */
+
+@media (width < 768px) {
+  .header__nav { display: none; } 
+  .header__icon-btn { display: block; }
 }
 
-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding: 1.25rem; 
-    max-width: 1366px;
-    margin-inline: auto;
-}  
-
-.header__logo { 
-    font-size: 1.5rem; 
-    font-weight: 600; 
+@media (width < 1024px ) {
+    .hero { flex-direction: column; gap: 2.5rem; }
+    .hero__title { max-width: 20ch; } 
+    .hero__img { width: 90%; max-width: 400px; margin-inline: auto; }
 }
 
-.nav__ul { 
-    list-style: none;  
-    display: flex; 
-     gap: 2rem;
-}
-
-.nav__a {
-    color: inherit;
-    text-decoration: none; 
-}
-
-/* hero section */
-
-.hero { 
-    display: flex;
-    padding-inline: 1.25rem ;
-    padding-top: 6rem;
-    overflow: hidden;
-    max-width: 1280px;
-    margin-inline: auto;
-}
-
-.hero__left,
-.hero__right {
-    flex: 1;
-}
-
-.hero__text{
-    color: #2eb1a3;
-    text-transform: uppercase;
-    font-family: 600;
-    margin-bottom: 1rem;
-
-}
-
-.hero__title { 
-    font-size: 3rem;
-    line-height: 1.1;
-    font-weight: 500;
-    letter-spacing: -0.05em;
-    
-}
-
-.hero__description {
-    font-size: 0.9rem;
-    opacity: 0.6;
-    font-weight: 300;
-    line-height: calc(1em + 0.5rem);
-    margin-block: 1.5rem;
-    max-width: 55ch;
-}
-
-.hero__btn { 
-    background: linear-gradient(to right, #e8546b, #ac3cf6);
-    padding: 0.5em 2em;
-    border-radius: 6px;
-    color: #000;
-}
-
-/* Hero Right */
-
-.hero__img {
-    max-width: 550px;
-    
+@media (width < 475px) {
+    .hero__title { font-size: 2.5rem; }
 }

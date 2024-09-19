@@ -11,6 +11,7 @@
 
 - Convenção BEM (Block, Element, Modifier).
 - HTML Semântico
+- FlexBox
 
 
 # Link
