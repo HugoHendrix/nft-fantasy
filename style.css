@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+
+html { overflow-y: scroll; scroll-behavior: smooth; }
+
+body { background: #06061a;  color: #f3f3f3; overflow-x: hidden; font-family: "Raleway", system-ui; }
+
+.bg { 
+    background: linear-gradient(150deg, rgba(172, 60, 246, 0.2), #06061a );
+}
+
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1.25rem; 
+    max-width: 1366px;
+    margin-inline: auto;
+}  
+
+.header__logo { 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+}
+
+.nav__ul { 
+    list-style: none;  
+    display: flex; 
+     gap: 2rem;
+}
+
+.nav__a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+/* hero section */
+
+.hero { 
+    display: flex;
+    padding-inline: 1.25rem ;
+    padding-top: 6rem;
+    overflow: hidden;
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.hero__left,
+.hero__right {
+    flex: 1;
+}
+
+.hero__text{
+    color: #2eb1a3;
+    text-transform: uppercase;
+    font-family: 600;
+    margin-bottom: 1rem;
+
+}
+
+.hero__title { 
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    
+}
+
+.hero__description {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-weight: 300;
+    line-height: calc(1em + 0.5rem);
+    margin-block: 1.5rem;
+    max-width: 55ch;
+}
+
+.hero__btn { 
+    background: linear-gradient(to right, #e8546b, #ac3cf6);
+    padding: 0.5em 2em;
+    border-radius: 6px;
+    color: #000;
+}
+
+/* Hero Right */
+
+.hero__img {
+    max-width: 550px;
+    
+}
