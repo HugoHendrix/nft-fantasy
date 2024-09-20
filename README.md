@@ -89,3 +89,6 @@ Para visualizar e testar o projeto:
 3. Certifique-se de que o **jQuery** e a **AOS Library** estão corretamente incluídos no projeto para o funcionamento dos efeitos de carregamento dinâmico e animações de scroll.
 
 ---
+
+### Agradecimentos
+Gostaria de expressar meus sinceros agradecimentos ao canal do Leevy (https://www.youtube.com/watch?v=GG1ZMmebQZE) , por compartilhar conteúdos incríveis e didáticos sobre desenvolvimento web. Seu canal foi uma fonte valiosa de aprendizado durante a criação deste projeto, especialmente nas partes relacionadas a Flexbox e BEM. Muito obrigado por ajudar tantos desenvolvedores a evoluir!
