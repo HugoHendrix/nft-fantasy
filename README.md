@@ -1,6 +1,4 @@
-Aqui está o README atualizado incluindo o uso de **jQuery** para carregar resultados dinamicamente e **AOS Library** para animações de scroll:
-
----
+![alt text](image-1.png)
 
 # NFT Fantasy - Projeto de Website
 
