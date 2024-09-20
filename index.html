@@ -54,22 +54,23 @@
       <div class="line"></div>
       <div class="items-wrapper">
         <div class="item">
-          <div class="item__title">1M+</div>
+          <div class="item__title" data-target="1000000">0</div>
           <div class="item__description">Usuários Ativos</div>
         </div>
         <div class="item">
-          <div class="item__title">R$115M</div>
+          <div class="item__title" data-target="115000000">R$0</div>
           <div class="item__description">Já ganhos</div>
         </div>
         <div class="item">
-          <div class="item__title">4.8</div>
+          <div class="item__title" data-target="4.8">0</div>
           <div class="item__description">Avaliações médias</div>
         </div>
         <div class="item">
-          <div class="item__title">200+</div>
+          <div class="item__title" data-target="200">0</div>
           <div class="item__description">Coleções</div>
         </div>
       </div>
+      
       <div class="info-wrapper">
         <div class="info__left">
           <img class="info__img" src="img/img1.png" data-aos="fade-right"
@@ -290,6 +291,48 @@
   <script>
     AOS.init();
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Função para formatar números grandes
+    function formatNumber(n) {
+        if (n >= 1000000) {
+            return (n / 1000000).toFixed(1).replace('.0', '') + 'M'; // Formata para milhões
+        }
+        if (n >= 1000) {
+            return (n / 1000).toFixed(1).replace('.0', '') + 'K'; // Formata para mil
+        }
+        return n;
+    }
+  
+    // Função de animação de contador
+    function animateCounter() {
+      $('.item__title').each(function() {
+        var $this = $(this),
+            target = parseFloat($this.data('target')), // Obtém o valor final a partir de 'data-target'
+            countFrom = 0,
+            duration = 2000; // Duração da animação em milissegundos
+  
+        $({ countNum: countFrom }).animate({ countNum: target }, {
+          duration: duration,
+          easing: 'swing',
+          step: function() {
+            // Atualiza o valor enquanto anima e formata
+            $this.text(formatNumber(Math.floor(this.countNum)));
+          },
+          complete: function() {
+            // Certifica que o valor final será exato e formatado
+            $this.text(formatNumber(target));
+          }
+        });
+      });
+    }
+  
+    $(document).ready(function() {
+      // Chama a função quando a página é carregada
+      animateCounter();
+    });
+  </script>
+  
 </body>
 
 </html>
