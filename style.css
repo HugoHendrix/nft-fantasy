@@ -1,13 +1,17 @@
 * { box-sizing: border-box; }
 
-html { overflow-y: scroll; scroll-behavior: smooth; }
-
+html { overflow-y: scroll; 
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+ 
 body { background: #06061a; color: #f3f3f3; overflow-x: hidden; font-family: "Raleway", system-ui; }
 
-.bg { background: linear-gradient(150deg, rgba(172, 60, 246, 0.2), #06061a); }
+.bg { background: linear-gradient(150deg, rgba(172, 60, 246, 0.2), #06061a);  }
 
 /* HEADER */
-header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; max-width: 1366px; margin-inline: auto; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; max-width: 1366px; margin-inline: auto;  }
 .header__logo { font-size: 1.5rem; font-weight: 600; } 
 .nav__ul { list-style: none; display: flex; gap: 2rem; } 
 .nav__a { color: inherit; text-decoration: none; }
@@ -15,14 +19,13 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .header__icon { width: 1.75rem; height: 1.75rem; }
 
 /* HERO SECTION */
-.hero { display: flex; padding-inline: 1.25rem; padding-top: 6rem; overflow: hidden; max-width: 1280px; margin-inline: auto; }
+.hero { display: flex; padding-inline: 1.25rem; padding-top: 6rem; overflow: hidden; max-width: 1280px; margin-inline: auto;  }
 .hero__left, .hero__right { flex: 1; }
 .hero__text { color: #2eb1a3; text-transform: uppercase; font-family: 600; margin-bottom: 1rem; } 
 .hero__title { font-size: 3rem; line-height: 1.1; font-weight: 500; letter-spacing: -0.05em; } 
 .hero__description { font-size: 0.9rem; opacity: 0.6; font-weight: 300; line-height: calc(1em + 0.5rem); margin-block: 1.5rem; max-width: 55ch; }
 .hero__btn { background: linear-gradient(to right, #e8546b, #ac3cf6); padding: 0.5em 2em; border-radius: 6px; color: #000; }
-/* Hero Right */ 
-.hero__img { max-width: 550px; }
+.hero__img { max-width: 700px; } /* Hero Right */ 
 
 /* INFO SECTIONS */
 .info { padding-top: 2rem; padding-bottom: 4rem; max-width: 1280px; margin-inline: auto; }
@@ -54,8 +57,8 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .feature__card-description { font-size: 1rem; color: rgba(255, 255, 255, 0.6); font-weight: 300; } 
 
 /* INFO 2 */
-.info2 { padding-top: 8rem; width: 1280px; margin-inline: auto; padding-inline: 1.25rem; }
-.info2-wrapper { display: flex; gap: 3rem; }
+.info2 { padding-top: 8rem;  width: 1200px; margin-inline: auto; padding-inline: 1.25rem; display: flex; flex-direction: column; gap: 6rem; }
+.info2-wrapper { display: flex; gap: 4rem; }
 .info2--flex1 { flex: 1; }
 .info2__img { width: 100%; max-width: 500px; }
 .info2--img { order: 1;}
@@ -64,34 +67,32 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .info2__btn::after { content:""; position: absolute; bottom: -0.25rem; left: 0; width: 100%; height: 2px; background-color: #2eb1a3;}
 
 
-
-
-
-
 /* MEDIA QUERIES */
-
-@media (width < 1024px ) {
-    .hero { flex-direction: column; gap: 2.5rem; }
-    .hero__title { max-width: 20ch; } 
-    .hero__img { width: 90%; max-width: 400px; margin-inline: auto; }
-
-    .info-wrapper { flex-direction: column; }
-    .section__description { max-width: 60ch; }
-    .info2-wrapper { flex-direction: column;  align-items: center; }
-    .info2--img { order: 0; }
-
-
-}
-
 
 @media (width < 768px) {
   .header__nav { display: none; } 
   .header__icon-btn { display: block; }
+
+  .info2-wrapper { flex-direction: column; align-items: center; gap: 2rem; }
+  .info2__img { max-width: 100%; }
+  .info2__btn { font-size: 1rem; padding: 0.75rem 1.5rem; }  
+  .info2--img { order: 0}
 }
 
 @media (width < 475px) {
-    .hero__title { font-size: 2.5rem; }
-    .section__title { font-size: 2rem; }
-
-    
+  .hero__title { font-size: 2.5rem; }
+  .section__title { font-size: 2rem; }    
 }
+
+@media (width < 1024px ) {
+  .hero { flex-direction: column; gap: 2.5rem; }
+  .hero__title { max-width: 20ch; } 
+  .hero__img { width: 90%; max-width: 400px; margin-inline: auto; }
+  
+  .info-wrapper { flex-direction: column; }
+  .section__description { max-width: 60ch; }  
+
+  .info2 { width: 90%; }
+  .info2-wrapper { flex-direction: column; align-items: center;  }
+  .info2--img { order: 0;}
+} 
