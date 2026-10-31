@@ -143,3 +143,6 @@ header { display: flex; justify-content: space-between; align-items: center; pad
   .info2-wrapper { flex-direction: column; align-items: center;  }
   .info2--img { order: 0;}
 } 
+
+/* reserva o espaço das imagens (width e height) sem distorcer */
+:where(img[height]) { height: auto; }
